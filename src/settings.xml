@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<settings>
+	<renderers>
+	  <renderer name="3Delight">
+	    <compileTool>/Applications/3Delight/bin/shaderdl</compileTool>
+	    <renderTool>/Applications/3Delight/bin/renderdl</renderTool>
+	  </renderer>
+	  <renderer name="PRMan">
+	    <compileTool>/Applications/Pixar/RenderManProServer-20.10/bin/shader</compileTool>
+	    <renderTool>/Applications/Pixar/RenderManProServer-20.10/bin/prman</renderTool>
+	  </renderer>
+	</renderers>
+	<nodes>
+		<skipFolders>tmp, .svn, prop-base, props, text-base</skipFolders>
+	</nodes>
+</settings>

@@ -1,0 +1,36 @@
+Option "searchpath" "shader" "@:/Users/Godfrey/codes/github/code-google-com/shaderlink/shaderlink/src/data/shader:/Users/Godfrey/codes/github/code-google-com/shaderlink/shaderlink/src/data/temp"
+Option "trace" "int maxdepth" 4
+Attribute "visibility" "int trace" [1]
+Attribute "visibility" "int transmission" [1]
+Display "/Users/Godfrey/codes/github/code-google-com/shaderlink/shaderlink/src/data/temp/preview.tif" "tiff" "rgb"
+
+Format 180 180 1
+PixelSamples 3 3
+PixelFilter "catmull-rom" 3 3
+Projection "perspective" "fov" 45
+ShadingRate 2.0
+
+Attribute "displacementbound" "float sphere" [0.5]
+
+LightSource "distantlight" 1 "intensity" 1.2 "from" [2 2 -2] "to" [0 0 0]
+LightSource "distantlight" 1 "intensity" 0.2 "from" [-8 -8 -2] "to" [0 0 0]
+Translate 0 0 5
+Rotate 45 1 0 0
+Rotate 45 0 0 1
+Scale 1 1 -1
+
+
+
+
+WorldBegin
+ReverseOrientation
+Attribute "visibility" "trace" 1
+Surface "previewChecker"
+Polygon "P" [5 5 -5  5 -5 -5  -5 -5 -5  -5 5 -5] "st" [0 0 1 0 1 1 0 1]
+Scale 1.5 1.5 1.5
+Surface "surface0"
+Displacement "displacement0"
+
+
+Sphere 1 -1 1 360
+WorldEnd
